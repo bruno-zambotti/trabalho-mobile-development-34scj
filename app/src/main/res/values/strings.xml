@@ -24,4 +24,12 @@
     <string name="repository_notepad_error_when_create">An error has occurred and the note cannot be created"</string>
     <string name="repository_notepad_error_when_delete">An error has occurred and the note cannot be deleted"</string>
     <string name="loading_message">Loading...</string>
+    <string name="about_notepad_version">Notepad 1.0</string>
+    <string name="about_class_year">2019 - FIAP - 34SCJ</string>
+    <string name="about_class_name">FULL STACK DEVELOPER</string>
+    <string name="about_class_desc">MICROSERVICES, CLOUD E IOT</string>
+    <string name="about_name_suel">334110 - Henrique Suel da Silva</string>
+    <string name="about_name_zani">334151 - Marcelo Tadeu Marchesoni Zani</string>
+    <string name="about_name_zambotti">334242 - Bruno Delphino Zambotti</string>
+    <string name="about_developer_by">Desenvolvido por:</string>
 </resources>
