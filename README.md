@@ -16,6 +16,9 @@
 
 ## Informações do Projeto
 
+### Funcionamento
+![](example.gif)
+
 ### Telas
 
 | Tela | Exemplo | 
