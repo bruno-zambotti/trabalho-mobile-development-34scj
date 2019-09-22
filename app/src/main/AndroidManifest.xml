@@ -3,6 +3,7 @@
           package="com.fiap.notepad">
 
     <application
+        android:name=".NotepadApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -31,5 +32,6 @@
         <activity android:name=".ui.main.MainActivity">
         </activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

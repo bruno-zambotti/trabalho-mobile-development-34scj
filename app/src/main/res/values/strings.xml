@@ -16,6 +16,14 @@
     <string name="activity_sign_up_user_created">User successfully created</string>
     <string name="activity_login_required_fields">User or password are invalid</string>
     <string name="activity_sign_up_all_fields_are_required">All fields are required</string>
+    <string name="view_model_form_request_successfully">Note stored with success</string>
+    <string name="view_model_form_update_successfully">Note updated with success</string>
+    <string name="view_model_form_delete_successfully">Note removed with success</string>
+    <string name="repository_notepad_error_when_get">Unable to load stored notes"</string>
+    <string name="repository_notepad_error_when_update">An error has occurred and the note cannot be updated"</string>
+    <string name="repository_notepad_error_when_create">An error has occurred and the note cannot be created"</string>
+    <string name="repository_notepad_error_when_delete">An error has occurred and the note cannot be deleted"</string>
+    <string name="loading_message">Loading...</string>
     <string name="about_notepad_version">Notepad 1.0</string>
     <string name="about_class_year">2019 - FIAP - 34SCJ</string>
     <string name="about_class_name">FULL STACK DEVELOPER</string>

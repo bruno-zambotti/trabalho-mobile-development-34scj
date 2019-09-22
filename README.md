@@ -7,7 +7,6 @@
 | RM     	| NOME                     	    |
 |--------	|-------------------------------|
 | 334242  | BRUNO DELPHINO ZAMBOTTI       |
-| 334110  | HENRIQUE SUEL DA SILVA        |
 | 334151  | MARCELO TADEU MARCHESONI ZANI |
 
 ## Repositório
