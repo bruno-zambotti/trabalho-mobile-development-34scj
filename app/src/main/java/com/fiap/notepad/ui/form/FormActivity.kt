@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import br.com.fiap.bza.calculadoraflex.utils.DatabaseUtil
+import com.fiap.notepad.utils.DatabaseUtil
 import com.fiap.notepad.R
 import com.fiap.notepad.model.NoteData
 import com.fiap.notepad.ui.list.ListActivity

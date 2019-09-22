@@ -1,4 +1,4 @@
-package br.com.fiap.bza.calculadoraflex.utils
+package com.fiap.notepad.utils
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase

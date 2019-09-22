@@ -23,16 +23,26 @@ class SignupActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         btCreate.setOnClickListener{
-            mAuth.createUserWithEmailAndPassword(
-                inputEmail.text.toString(),
-                inputPassword.text.toString()
-            ).addOnCompleteListener {
-                if (it.isSuccessful){
-                    saveInRealTimeDatabase()
-                    goToHome()
-                } else {
-                    Toast.makeText(this@SignupActivity, it.exception?.message,
-                        Toast.LENGTH_SHORT).show()
+            val email:String = inputEmail.text.toString()
+            val password:String = inputPassword.text.toString()
+            val name:String = inputName.text.toString()
+
+            if (email.isNullOrEmpty() || password.isNullOrEmpty() || name.isNullOrEmpty()) {
+                Toast.makeText(this@SignupActivity, R.string.activity_sign_up_all_fields_are_required,
+                    Toast.LENGTH_SHORT).show()
+            } else {
+                mAuth.createUserWithEmailAndPassword(
+                    email, password
+                ).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        saveInRealTimeDatabase()
+                        goToHome()
+                    } else {
+                        Toast.makeText(
+                            this@SignupActivity, it.exception?.message,
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
             }
         }

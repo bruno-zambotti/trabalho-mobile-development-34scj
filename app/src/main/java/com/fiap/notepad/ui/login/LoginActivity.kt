@@ -26,15 +26,22 @@ class LoginActivity : AppCompatActivity() {
         }
 
         btLogin.setOnClickListener{
-            mAuth.signInWithEmailAndPassword(
-                inputLoginEmail.text.toString(),
-                inputLoginPassword.text.toString()
-            ).addOnCompleteListener {
-                if (it.isSuccessful){
-                    goToHome()
-                } else {
-                    Toast.makeText(this@LoginActivity, it.exception?.message,
-                        Toast.LENGTH_SHORT).show()
+            val email:String = inputLoginEmail.text.toString()
+            val password:String = inputLoginPassword.text.toString()
+
+            if (email.isNullOrEmpty() || password.isNullOrEmpty()) {
+                Toast.makeText(this@LoginActivity, R.string.activity_login_required_fields,
+                    Toast.LENGTH_SHORT).show()
+            } else {
+                mAuth.signInWithEmailAndPassword(
+                    email, password
+                ).addOnCompleteListener {
+                    if (it.isSuccessful){
+                        goToHome()
+                    } else {
+                        Toast.makeText(this@LoginActivity, it.exception?.message,
+                            Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }
