@@ -1,6 +1,5 @@
 package com.fiap.notepad.repository
 
-import com.fiap.notepad.model.NoteResponse
 import com.fiap.notepad.model.NoteResponseItem
 import com.fiap.notepad.api.NotepadService
 import retrofit2.Call
@@ -8,6 +7,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import com.fiap.notepad.R
 import com.fiap.notepad.model.NoteRequest
+import com.fiap.notepad.model.NoteResponse
 
 class NotepadRepositoryImpl(var notepadService: NotepadService) : NotepadRepository {
     override fun updateNote(
@@ -73,7 +73,7 @@ class NotepadRepositoryImpl(var notepadService: NotepadService) : NotepadReposit
     override fun getNotes(
         onComplete: (List<NoteResponseItem>?) -> Unit,
         onError: (Throwable?) -> Unit) {
-        notepadService.getNotes().enqueue(object : Callback<NoteResponse> {
+        notepadService.getNotes().enqueue(object: Callback<NoteResponse> {
             override fun onFailure(call: Call<NoteResponse>, t: Throwable) {
                 onError(t)
             }

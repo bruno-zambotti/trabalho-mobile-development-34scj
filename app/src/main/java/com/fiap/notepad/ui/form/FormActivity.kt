@@ -7,9 +7,11 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.fiap.notepad.utils.DatabaseUtil
 import com.fiap.notepad.R
 import com.fiap.notepad.model.NoteData
+import com.fiap.notepad.ui.about.AboutActivity
 import com.fiap.notepad.ui.list.ListActivity
 import com.fiap.notepad.ui.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -40,6 +42,8 @@ class FormActivity : AppCompatActivity() {
 
     private fun saveNoteData() {
         if (TextUtils.isEmpty(inputNote.text)) {
+            Toast.makeText(this@FormActivity, R.string.activity_form_required_text,
+                Toast.LENGTH_SHORT).show()
         } else {
             val noteData = NoteData()
             noteData.note = inputNote.text.toString()
@@ -47,7 +51,7 @@ class FormActivity : AppCompatActivity() {
             nextScreen.putExtra("new_note", noteData)
             startActivity(nextScreen)
         }
-        finish()
+        clearData()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -70,6 +74,10 @@ class FormActivity : AppCompatActivity() {
                 allNotes()
                 return true
             }
+            R.id.action_about -> {
+                about()
+                return true
+            }
             else -> return super.onOptionsItemSelected(item)
         }
     }
@@ -82,11 +90,14 @@ class FormActivity : AppCompatActivity() {
 
     private fun allNotes() {
         startActivity(Intent(this, ListActivity::class.java))
-        finish()
+    }
+
+    private fun about() {
+        startActivity(Intent(this, AboutActivity::class.java))
     }
 
     private fun clearData() {
-
+        inputNote.setText("")
     }
 
     private fun listenerFirebaseRealtime() {

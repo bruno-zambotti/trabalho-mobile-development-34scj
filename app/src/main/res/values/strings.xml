@@ -13,10 +13,12 @@
     <string name="menu_title_logout">Logout</string>
     <string name="menu_title_all_notes">All notes</string>
     <string name="menu_title_clear_data">Clear Data</string>
+    <string name="menu_title_about">About</string>
     <string name="activity_sign_up_error_create_user">An error occurred while creating user</string>
     <string name="activity_sign_up_user_created">User successfully created</string>
     <string name="activity_login_required_fields">User or password are invalid</string>
     <string name="activity_sign_up_all_fields_are_required">All fields are required</string>
+    <string name="activity_form_required_text">No notes were written</string>
     <string name="view_model_form_request_successfully">Note stored with success</string>
     <string name="view_model_form_update_successfully">Note updated with success</string>
     <string name="view_model_form_delete_successfully">Note removed with success</string>

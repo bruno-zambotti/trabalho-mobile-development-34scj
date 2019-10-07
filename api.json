@@ -2,11 +2,11 @@
   "notes": [
     {
       "id": 1,
-      "name": "Verificar as pendências do projeto"
+      "note": "Verificar as pendências do projeto"
     },
     {
       "id": 2,
-      "name": "Não se esquecer de fazer aquilo"
+      "note": "Não se esquecer de fazer aquilo"
     }
   ]
 }

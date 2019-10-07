@@ -5,6 +5,10 @@
         app:showAsAction="never"
         android:title="@string/menu_title_all_notes">
     </item>
+    <item android:id="@+id/action_about"
+        app:showAsAction="never"
+        android:title="@string/menu_title_about">
+    </item>
     <item android:id="@+id/action_clear"
           app:showAsAction="never"
           android:title="@string/menu_title_clear_data">

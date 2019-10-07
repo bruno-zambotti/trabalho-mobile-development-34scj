@@ -1,5 +1,7 @@
 package com.fiap.notepad.model
 
+import com.google.gson.annotations.SerializedName
+
 data class NoteResponse(
-    val notes: List<NoteResponseItem>
+     @SerializedName("notes") val notes: List<NoteResponseItem>
 )
