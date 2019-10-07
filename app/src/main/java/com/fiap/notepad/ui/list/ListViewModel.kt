@@ -28,6 +28,17 @@ class ListViewModel (val notepadRepository: NotepadRepository) : ViewModel() {
         )
     }
 
+    fun createNote(noteRequest : NoteRequest) {
+        isLoading.value = true
+        notepadRepository.createNote(noteRequest, {
+            isLoading.value = false
+            messageResponse.value = R.string.view_model_form_request_successfully.toString()
+        }, {
+            isLoading.value = false
+            messageResponse.value = it?.message
+        })
+    }
+
     fun updateNote(noteId : Long, noteRequest : NoteRequest) {
         isLoading.value = true
         notepadRepository.updateNote(noteId, noteRequest, {

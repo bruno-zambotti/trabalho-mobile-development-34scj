@@ -1,8 +1,10 @@
 package com.fiap.notepad.ui.form
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import com.fiap.notepad.utils.DatabaseUtil
@@ -33,17 +35,19 @@ class FormActivity : AppCompatActivity() {
 
         btSave.setOnClickListener {
             saveNoteData()
-            startActivity(Intent(this@FormActivity, ListActivity::class.java))
         }
     }
 
     private fun saveNoteData() {
-        val noteData = NoteData(
-            ""
-        )
-        FirebaseDatabase.getInstance().getReference(firebaseReferenceNode)
-            .child(userId)
-            .setValue(noteData)
+        if (TextUtils.isEmpty(inputNote.text)) {
+        } else {
+            val noteData = NoteData()
+            noteData.note = inputNote.text.toString()
+            val nextScreen = Intent(this@FormActivity, ListActivity::class.java)
+            nextScreen.putExtra("new_note", noteData)
+            startActivity(nextScreen)
+        }
+        finish()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -62,6 +66,10 @@ class FormActivity : AppCompatActivity() {
                 logout()
                 return true
             }
+            R.id.action_allNotes -> {
+                allNotes()
+                return true
+            }
             else -> return super.onOptionsItemSelected(item)
         }
     }
@@ -69,6 +77,11 @@ class FormActivity : AppCompatActivity() {
     private fun logout() {
         mAuth.signOut()
         startActivity(Intent(this, LoginActivity::class.java))
+        finish()
+    }
+
+    private fun allNotes() {
+        startActivity(Intent(this, ListActivity::class.java))
         finish()
     }
 
@@ -85,8 +98,6 @@ class FormActivity : AppCompatActivity() {
             .child(userId)
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    val noteData = dataSnapshot.getValue(NoteData::class.java)
-
                 }
 
                 override fun onCancelled(error: DatabaseError) {

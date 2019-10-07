@@ -11,6 +11,7 @@
     <string name="hint_note">Type your note here</string>
     <string name="header_sign_up">Sign up</string>
     <string name="menu_title_logout">Logout</string>
+    <string name="menu_title_all_notes">All notes</string>
     <string name="menu_title_clear_data">Clear Data</string>
     <string name="activity_sign_up_error_create_user">An error occurred while creating user</string>
     <string name="activity_sign_up_user_created">User successfully created</string>
@@ -24,4 +25,8 @@
     <string name="repository_notepad_error_when_create">An error has occurred and the note cannot be created"</string>
     <string name="repository_notepad_error_when_delete">An error has occurred and the note cannot be deleted"</string>
     <string name="loading_message">Loading...</string>
+    <string name="request_permission_title">P e r m i s s i o n \n r e q u e s t</string>
+    <string name="request_permission_message">We need to have internet access from your smartphone to consult and record your notes.</string>
+    <string name="request_permission_button">Enable permission</string>
+    <string name="activity_list_error_on_load">Could not perform operation</string>
 </resources>
