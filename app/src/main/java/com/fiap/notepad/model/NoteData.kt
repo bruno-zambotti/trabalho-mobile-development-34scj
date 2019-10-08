@@ -5,6 +5,6 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class NoteData(
-    var id: Long = 0,
+    var id: Int = 0,
     var note: String = ""
 ): Parcelable

@@ -6,7 +6,7 @@
 
     <LinearLayout style="@style/container_row">
         <RadioButton
-            android:id="@+id/radio"
+            android:id="@+id/rRecyclerItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
@@ -19,6 +19,8 @@
             android:background="@color/colorWhite"
             android:textColor="@color/colorGray"
             android:textSize="16sp" />
+
     </LinearLayout>
 
+    <View style="@style/divider"/>
 </LinearLayout>
