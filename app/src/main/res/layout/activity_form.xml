@@ -29,11 +29,23 @@ tools:context=".ui.form.FormActivity">
         style="@style/custom_button"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/button_save"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btAllNotes"
         app:layout_constraintEnd_toEndOf="@+id/inputNote"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputNote" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btAllNotes"
+        style="@style/custom_button"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/button_all_notes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btSave"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btSave" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

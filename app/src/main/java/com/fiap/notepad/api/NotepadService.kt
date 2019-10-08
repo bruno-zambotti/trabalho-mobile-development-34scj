@@ -13,8 +13,8 @@ interface NotepadService {
     fun postNote(@Body note: NoteRequest): Call<NoteResponseItem>
 
     @PUT("/notes/{noteId}")
-    fun updateNote(@Path("noteId") noteId: Long, @Body note: NoteRequest): Call<NoteResponseItem>
+    fun updateNote(@Path("noteId") noteId: Int, @Body note: NoteRequest): Call<NoteResponseItem>
 
     @DELETE("/notes/{noteId}")
-    fun deleteNote(@Path("noteId") noteId: Long): Call<Void>
+    fun deleteNote(@Path("noteId") noteId: Int): Call<Void>
 }

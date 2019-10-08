@@ -7,12 +7,10 @@ import retrofit2.Callback
 import retrofit2.Response
 import com.fiap.notepad.R
 import com.fiap.notepad.model.NoteRequest
-import com.fiap.notepad.model.NoteResponse
-import java.util.*
 
 class NotepadRepositoryImpl(var notepadService: NotepadService) : NotepadRepository {
     override fun updateNote(
-        noteId: Long,
+        noteId: Int,
         noteRequest: NoteRequest,
         onComplete: (NoteResponseItem?) -> Unit,
         onError: (Throwable?) -> Unit
@@ -54,7 +52,7 @@ class NotepadRepositoryImpl(var notepadService: NotepadService) : NotepadReposit
             })
     }
 
-    override fun deleteNote(noteId: Long, onComplete: () -> Unit, onError: (Throwable?) -> Unit) {
+    override fun deleteNote(noteId: Int, onComplete: () -> Unit, onError: (Throwable?) -> Unit) {
         notepadService.deleteNote(noteId)
             .enqueue(object : Callback<Void> {
                 override fun onFailure(call: Call<Void>, t: Throwable) {

@@ -10,7 +10,7 @@ interface NotepadRepository {
     )
 
     fun updateNote(
-        noteId: Long,
+        noteId: Int,
         noteRequest: NoteRequest,
         onComplete: (NoteResponseItem?) -> Unit,
         onError: (Throwable?) -> Unit
@@ -23,7 +23,7 @@ interface NotepadRepository {
     )
 
     fun deleteNote(
-        noteId: Long,
+        noteId: Int,
         onComplete: () -> Unit,
         onError: (Throwable?) -> Unit
     )

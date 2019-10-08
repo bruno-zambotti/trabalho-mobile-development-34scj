@@ -39,6 +39,10 @@ class FormActivity : AppCompatActivity() {
         btSave.setOnClickListener {
             saveNoteData()
         }
+
+        btAllNotes.setOnClickListener{
+            allNotes()
+        }
     }
 
     private fun saveNoteData() {

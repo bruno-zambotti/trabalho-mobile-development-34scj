@@ -15,6 +15,7 @@ class ListViewModel (val notepadRepository: NotepadRepository) : ViewModel() {
     val isLoading: MutableLiveData<Boolean> = MutableLiveData()
 
     fun getNotes() {
+
         isLoading.value = true
         notepadRepository.getNotes({
                 notes.value = it
@@ -36,27 +37,6 @@ class ListViewModel (val notepadRepository: NotepadRepository) : ViewModel() {
         }, {
             isLoading.value = false
             messageResponse.value = it?.message
-        })
-    }
-
-    fun updateNote(noteId : Long, noteRequest : NoteRequest) {
-        isLoading.value = true
-        notepadRepository.updateNote(noteId, noteRequest, {
-            isLoading.value = false
-            messageResponse.value = R.string.view_model_form_update_successfully.toString()
-        }, {
-            isLoading.value = false
-            messageResponse.value = it?.message
-        })
-    }
-
-    fun deleteNote(noteId : Long) {
-        isLoading.value = true
-        notepadRepository.deleteNote(noteId, {
-            isLoading.value = false
-            messageResponse.value = R.string.view_model_form_delete_successfully.toString()
-        }, {
-            isLoading.value = false
         })
     }
 }

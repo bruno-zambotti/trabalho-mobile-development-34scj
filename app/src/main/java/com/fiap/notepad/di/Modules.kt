@@ -4,9 +4,9 @@ import com.fiap.notepad.api.NotepadService
 import com.fiap.notepad.repository.NotepadRepository
 import com.fiap.notepad.repository.NotepadRepositoryImpl
 import com.fiap.notepad.constants.IntegrationsConstants.URL_NOTEPAD_API
-import com.fiap.notepad.ui.form.FormViewModel
 import com.fiap.notepad.ui.list.ListViewModel
 import com.facebook.stetho.okhttp3.StethoInterceptor
+import com.fiap.notepad.ui.edit.EditViewModel
 import okhttp3.OkHttpClient
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit
 
 val viewModelModule = module {
     viewModel { ListViewModel(get()) }
-    viewModel { FormViewModel(get()) }
+    viewModel { EditViewModel(get()) }
 }
 
 val repositoryModule = module {

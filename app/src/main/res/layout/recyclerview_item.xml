@@ -4,23 +4,25 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+    <View style="@style/divider"/>
+
     <LinearLayout style="@style/container_row">
-        <RadioButton
-            android:id="@+id/rRecyclerItem"
-            android:layout_width="match_parent"
+
+        <ImageView
+            android:id="@+id/ivRecyclerItem"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:src="@drawable/ic_edit" />
 
         <TextView
             android:id="@+id/tvRecyclerItem"
-            style="@style/word_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorWhite"
             android:textColor="@color/colorGray"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            style="@style/word_title" />
 
     </LinearLayout>
 
-    <View style="@style/divider"/>
 </LinearLayout>

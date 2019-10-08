@@ -1,5 +1,6 @@
 package com.fiap.notepad.ui.list
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,6 +13,8 @@ import com.fiap.notepad.R
 import com.fiap.notepad.constants.CallerConstants
 import com.fiap.notepad.model.NoteData
 import com.fiap.notepad.model.NoteRequest
+import com.fiap.notepad.ui.form.FormActivity
+import kotlinx.android.synthetic.main.activity_result.*
 import kotlinx.android.synthetic.main.include_loading.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -45,7 +48,8 @@ class ListActivity : AppCompatActivity() {
                 val note = intent.extras?.getParcelable<NoteData>("new_note")!!.note
                 listViewModel.createNote(NoteRequest(note))
                 handleNotes()
-            } else if(caller == CallerConstants.MENU_FORM_CALLER){
+            } else if (caller == CallerConstants.MENU_FORM_CALLER ||
+                       caller == CallerConstants.ACTIVITY_EDIT_CALLER){
                 handleNotes()
             } else {
                 Toast.makeText(this, getString(R.string.activity_list_error_on_load),
