@@ -27,12 +27,12 @@
 | Criação de usuário | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/signup.png) |
 | Cadastro | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/insert_notes.png) |
 | SplashScreen | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/splash_screen.png) |
-| Lista de Exibição dos Dados| ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/list.png) |
-| Edição dos dados | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/edit.png) |
-| Carregamento da API | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/loading_api_integration.png) |
-| Confirmação de deleção | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/delete.png) |
-| Sobre | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/about.png) |
-
+| Lista de Exibição dos Dados| ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/list.PNG) |
+| Edição dos dados | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/edit.PNG) |
+| Carregamento da API | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/loading_api_integration.PNG) |
+| Confirmação de deleção | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/delete.PNG) |
+| Sobre | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/about.PNG) |
+ 
 ## Como executar a aplicação
 
 ### Executando a API REST 
