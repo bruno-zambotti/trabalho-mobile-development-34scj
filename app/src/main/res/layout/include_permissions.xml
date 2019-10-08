@@ -17,7 +17,7 @@
             android:layout_marginBottom="8dp"
             android:gravity="center"
             android:padding="8dp"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorWhite"
             android:textSize="22sp"
             tools:text="@string/request_permission_title" />
 
