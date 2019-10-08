@@ -10,4 +10,5 @@
     <color name="colorDivider">#BDBDBD</color>
     <color name="background">#FFFFFF</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#757575</color>
 </resources>

@@ -17,7 +17,7 @@ class ListAdapter internal constructor(
     private var notes = emptyList<NoteData>();
 
     inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val noteItemView: TextView = itemView.findViewById(R.id.tvDevelopedBy)
+        val noteItemView: TextView = itemView.findViewById(R.id.tvRecyclerItem)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {

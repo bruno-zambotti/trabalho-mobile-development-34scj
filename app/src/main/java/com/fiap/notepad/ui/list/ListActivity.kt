@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fiap.notepad.R
+import com.fiap.notepad.constants.CallerConstants
 import com.fiap.notepad.model.NoteData
 import com.fiap.notepad.model.NoteRequest
 import kotlinx.android.synthetic.main.include_loading.*
@@ -26,6 +27,8 @@ class ListActivity : AppCompatActivity() {
             Toast.makeText(this, getString(R.string.activity_list_error_on_load),
                 Toast.LENGTH_SHORT).show()
         } else {
+            val caller = intent.getIntExtra("caller", 0)
+
             val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
             val adapter = ListAdapter(this)
             recyclerView.adapter = adapter
@@ -38,22 +41,33 @@ class ListActivity : AppCompatActivity() {
                 }
             })
 
-            val note = intent.extras?.getParcelable<NoteData>("new_note")!!.note
-            listViewModel.createNote(NoteRequest(note))
-            listViewModel.getNotes()
-            listViewModel.isLoading.observe(this, Observer {
-                if (it == true) {
-                    containerLoading.visibility = View.VISIBLE
-                } else {
-                    containerLoading.visibility = View.GONE
-                }
-            })
-            listViewModel.messageResponse.observe(this, Observer {
-                if(it != "") {
-                    Toast.makeText(this, it, Toast.LENGTH_LONG).show()
-                }
-            })
+            if (caller == CallerConstants.ACTIVITY_FORM_CALLER) {
+                val note = intent.extras?.getParcelable<NoteData>("new_note")!!.note
+                listViewModel.createNote(NoteRequest(note))
+                handleNotes()
+            } else if(caller == CallerConstants.MENU_FORM_CALLER){
+                handleNotes()
+            } else {
+                Toast.makeText(this, getString(R.string.activity_list_error_on_load),
+                    Toast.LENGTH_SHORT).show()
+            }
         }
+    }
+
+    private fun handleNotes() {
+        listViewModel.getNotes()
+        listViewModel.isLoading.observe(this, Observer {
+            if (it == true) {
+                containerLoading.visibility = View.VISIBLE
+            } else {
+                containerLoading.visibility = View.GONE
+            }
+        })
+        listViewModel.messageResponse.observe(this, Observer {
+            if (it != "") {
+                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+            }
+        })
     }
 }
 

@@ -10,6 +10,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.fiap.notepad.utils.DatabaseUtil
 import com.fiap.notepad.R
+import com.fiap.notepad.constants.CallerConstants
 import com.fiap.notepad.model.NoteData
 import com.fiap.notepad.ui.about.AboutActivity
 import com.fiap.notepad.ui.list.ListActivity
@@ -47,9 +48,10 @@ class FormActivity : AppCompatActivity() {
         } else {
             val noteData = NoteData()
             noteData.note = inputNote.text.toString()
-            val nextScreen = Intent(this@FormActivity, ListActivity::class.java)
-            nextScreen.putExtra("new_note", noteData)
-            startActivity(nextScreen)
+            val activity = Intent(this@FormActivity, ListActivity::class.java)
+            activity.putExtra("new_note", noteData)
+            activity.putExtra("caller", CallerConstants.ACTIVITY_FORM_CALLER);
+            startActivity(activity)
         }
         clearData()
     }
@@ -89,7 +91,9 @@ class FormActivity : AppCompatActivity() {
     }
 
     private fun allNotes() {
-        startActivity(Intent(this, ListActivity::class.java))
+        val activity = Intent(this@FormActivity, ListActivity::class.java)
+        activity.putExtra("caller", CallerConstants.MENU_FORM_CALLER);
+        startActivity(activity)
     }
 
     private fun about() {
