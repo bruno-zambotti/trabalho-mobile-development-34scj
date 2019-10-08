@@ -13,6 +13,7 @@ class ListViewModel (val notepadRepository: NotepadRepository) : ViewModel() {
     val notes: MutableLiveData<List<NoteResponseItem>> = MutableLiveData()
 
     val isLoading: MutableLiveData<Boolean> = MutableLiveData()
+    val isNoteCreated: MutableLiveData<Boolean> = MutableLiveData()
 
     fun getNotes() {
 
@@ -31,8 +32,10 @@ class ListViewModel (val notepadRepository: NotepadRepository) : ViewModel() {
 
     fun createNote(noteRequest : NoteRequest) {
         isLoading.value = true
+        isNoteCreated.value = false
         notepadRepository.createNote(noteRequest, {
             isLoading.value = false
+            isNoteCreated.value = true
             messageResponse.value = R.string.view_model_form_request_successfully.toString()
         }, {
             isLoading.value = false

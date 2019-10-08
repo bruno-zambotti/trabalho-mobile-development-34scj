@@ -26,6 +26,11 @@ class ListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
+        fab.setOnClickListener {
+            val activity = Intent(this, FormActivity::class.java)
+            startActivity(activity)
+        }
+
         if (intent.extras == null) {
             Toast.makeText(this, getString(R.string.activity_list_error_on_load),
                 Toast.LENGTH_SHORT).show()
@@ -47,7 +52,12 @@ class ListActivity : AppCompatActivity() {
             if (caller == CallerConstants.ACTIVITY_FORM_CALLER) {
                 val note = intent.extras?.getParcelable<NoteData>("new_note")!!.note
                 listViewModel.createNote(NoteRequest(note))
-                handleNotes()
+                listViewModel.isNoteCreated.observe(this, Observer {
+                    if (it == true) {
+                        handleNotes()
+                        it == false
+                    }
+                })
             } else if (caller == CallerConstants.MENU_FORM_CALLER ||
                        caller == CallerConstants.ACTIVITY_EDIT_CALLER){
                 handleNotes()
@@ -65,11 +75,6 @@ class ListActivity : AppCompatActivity() {
                 containerLoading.visibility = View.VISIBLE
             } else {
                 containerLoading.visibility = View.GONE
-            }
-        })
-        listViewModel.messageResponse.observe(this, Observer {
-            if (it != "") {
-                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
             }
         })
     }

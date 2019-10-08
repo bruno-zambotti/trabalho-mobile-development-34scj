@@ -61,6 +61,7 @@ class EditActivity : AppCompatActivity() {
             val activity = Intent(this@EditActivity, ListActivity::class.java)
             activity.putExtra("caller", CallerConstants.ACTIVITY_EDIT_CALLER);
             startActivity(activity)
+            finish()
         }
         clearData()
     }
@@ -82,6 +83,7 @@ class EditActivity : AppCompatActivity() {
                     val activity = Intent(this@EditActivity, ListActivity::class.java)
                     activity.putExtra("caller", CallerConstants.ACTIVITY_EDIT_CALLER);
                     startActivity(activity)
+                    finish()
                 })
             .setNegativeButton(R.string.activity_edit_delete_action_cancel,
                 DialogInterface.OnClickListener { dialog, id -> dialog.cancel() })
