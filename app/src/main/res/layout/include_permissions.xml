@@ -7,30 +7,30 @@
               android:background="@drawable/background_permission"
               android:gravity="center"
               android:orientation="vertical"
-              android:paddingLeft="32dp"
-              android:paddingRight="32dp">
+              android:paddingLeft="@dimen/permissions_padding"
+              android:paddingRight="@dimen/permissions_padding">
 
     <TextView
             android:id="@+id/tvTitleDialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/permissions_title_margin"
             android:gravity="center"
-            android:padding="8dp"
+            android:padding="@dimen/permissions_title_padding"
             android:textColor="@color/colorWhite"
-            android:textSize="22sp"
+            android:textSize="@dimen/permissions_title_text_size"
             tools:text="@string/request_permission_title" />
 
     <TextView
             android:id="@+id/tvMessageDialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/permissions_message_margin"
             android:gravity="center"
-            android:minWidth="820dp"
-            android:padding="8dp"
-            android:textColor="#FFF"
-            android:textSize="18sp"
+            android:minWidth="@dimen/permissions_message_min_width"
+            android:padding="@dimen/permissions_message_padding"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/permissions_message_text_size"
             tools:text="@string/request_permission_message" />
 
     <Button
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="@dimen/permissions_message_button_margin"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/request_permission_button" />
 </LinearLayout>

@@ -8,24 +8,24 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="56dp"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp">
+            android:paddingTop="@dimen/activity_login_layout_padding_top"
+            android:paddingLeft="@dimen/activity_login_layout_padding_left"
+            android:paddingRight="@dimen/activity_login_layout_padding_right">
 
         <ImageView
             android:id="@+id/ivLogo"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="@dimen/activity_login_logo_area"
+            android:layout_height="@dimen/activity_login_logo_area"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="@dimen/activity_login_logo_margim_bottom"
             android:contentDescription="@string/app_logo"
             android:src="@drawable/notepad_icon" />
 
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginTop="@dimen/activity_login_text_margin"
+                android:layout_marginBottom="@dimen/activity_login_text_margin">
             <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/inputLoginEmail"
                     android:layout_width="match_parent"
@@ -37,8 +37,8 @@
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginTop="@dimen/activity_login_text_margin"
+                android:layout_marginBottom="@dimen/activity_login_text_margin">
             <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/inputLoginPassword"
                     android:layout_width="match_parent"
@@ -51,19 +51,19 @@
                 android:id="@+id/btLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="24dp"
-                android:padding="12dp"
+                android:layout_marginTop="@dimen/activity_login_button_margin"
+                android:layout_marginBottom="@dimen/activity_login_button_margin"
+                android:padding="@dimen/activity_login_button_padding"
                 style="@style/custom_button"
                 android:text="@string/button_login"/>
 
         <TextView android:id="@+id/btSignup"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:layout_marginBottom="24dp"
+                  android:layout_marginBottom="@dimen/activity_login_signup_button_margin"
                   android:text="@string/label_new_account"
                   android:gravity="center"
-                  android:textSize="16sp"/>
+                  android:textSize="@dimen/activity_login_signup_button_text_size"/>
 
     </LinearLayout>
 </ScrollView>
