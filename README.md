@@ -27,9 +27,11 @@
 | Criação de usuário | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/signup.png) |
 | Cadastro | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/insert_notes.png) |
 | SplashScreen | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/splash_screen.png) |
-| Lista de Exibição dos Dados| ![Smartphone](https://img.icons8.com/android/26/000000/touchscreen-smartphone.png) Em desenvolvimento |
-| Edição dos dados | ![Smartphone](https://img.icons8.com/android/26/000000/touchscreen-smartphone.png) Em desenvolvimento |
-| Sobre | ![Smartphone](https://img.icons8.com/android/26/000000/touchscreen-smartphone.png) Em desenvolvimento |
+| Lista de Exibição dos Dados| ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/list.png) |
+| Edição dos dados | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/edit.png) |
+| Carregamento da API | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/loading_api_integration.png) |
+| Confirmação de deleção | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/delete.png) |
+| Sobre | ![Smartphone](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/about.png) |
 
 ## Como executar a aplicação
 
@@ -73,6 +75,3 @@ Pode ser necessário navegar até a pasta em que o arquivo api.json encontra-se 
 ![Exemplo](https://raw.githubusercontent.com/bruno-zambotti/trabalho-mobile-development-34scj/master/assets/json-example.png)
 
 5. Tendo realizado todos os passos anteriores com sucesso a aplicação já poderá consumir e manipular os dados dessa API normalmente.
-
-### Executando o projeto
-Em desenvolvimento.
